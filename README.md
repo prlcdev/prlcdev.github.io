@@ -11,6 +11,7 @@ Live at https://prlcdev.github.io. Static site with no build step, served by Git
 | `index.html` | Page markup and section text (hero, results, strengths, certifications, contact panel) | Change wording on the page |
 | `js/data/content.js` | Experience timeline, companies, tools, globe places, countries, boot/hero/contact text, email, LinkedIn | Update experience or contact details |
 | `js/data/geo.js` | Country and coastline outlines for the globe | Add a country outline |
+| `js/data/agent.js` | Agent Log entries: every LinkedIn About the career agent published, newest first | The career agent adds one entry per approved run |
 | `css/themes/<name>.css` | One theme's colors and fonts | Recolor a theme |
 | `js/config/themes.js` | Theme list: menu label, background scene, CSS effects | Mix and match effects |
 | `js/scenes/<name>.js` | One animated parallax background each | Tune or redesign a background |

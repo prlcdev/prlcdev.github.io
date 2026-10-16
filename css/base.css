@@ -232,3 +232,22 @@ h2{font:700 clamp(1.4rem,3.4vw,2.1rem) var(--disp);letter-spacing:.06em;color:va
 
 footer{max-width:1180px;margin:80px auto 0;padding:24px 16px 40px;border-top:1px solid var(--line);font:.72rem var(--mono);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
+
+/* ---------- agent log (js/ui/agent.js) ---------- */
+.agent-intro{color:var(--muted);max-width:720px;margin:-12px 0 20px;font-size:.95rem}
+.agent-deck{padding:22px 24px;outline:none}
+.ag-bar{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;font:.7rem var(--mono);letter-spacing:.14em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+.ag-tag b{color:var(--a1)}
+.ag-item{color:var(--a2)}
+.ag-slide{max-width:760px;font-size:.98rem;line-height:1.7;color:var(--ink);min-height:320px}
+.ag-slide p{margin:0 0 14px}
+.ag-slide blockquote{margin:18px 0;padding:14px 18px;border-left:3px solid var(--a1);background:rgba(127,127,127,.06);font-style:italic;color:var(--head)}
+.ag-slide cite{display:block;margin-top:8px;font:normal .78rem var(--mono);color:var(--muted)}
+.ag-slide.in{animation:agIn .45s ease both}
+@keyframes agIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ag-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}
+.ag-nav .btn:disabled{opacity:.3;cursor:default}
+.ag-dots{display:flex;gap:8px;flex-wrap:wrap}
+.ag-dot{width:10px;height:10px;border-radius:50%;border:1px solid var(--a1);background:transparent;cursor:pointer;padding:0}
+.ag-dot.on{background:var(--a1)}
+@media (prefers-reduced-motion: reduce){.ag-slide.in{animation:none}}
