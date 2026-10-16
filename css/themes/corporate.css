@@ -1,0 +1,10 @@
+/* corporate theme — tokens only. Colors must be hex (canvas scenes read them). */
+[data-theme="corporate"]{
+  --bg:#f5f6f8; --bg2:#ffffff; --panel:#ffffff; --line:rgba(15,23,42,.12);
+  --ink:#1d2330; --muted:#5b6475; --head:#0b1220; --on-a:#ffffff;
+  --a1:#1f5f8b; --a2:#d1495b; --a3:#b7791f; --ok:#1b8a5a;
+  --disp:"Space Grotesk",Inter,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace; --body:Inter,system-ui,sans-serif;
+  --g:0; --cut:0px; --rad:10px; --panel-sh:0 1px 2px rgba(15,23,42,.05),0 10px 30px rgba(15,23,42,.07); --floor-op:0;
+  --sun:none;
+  --clip:none; --clip-btn:none;
+}

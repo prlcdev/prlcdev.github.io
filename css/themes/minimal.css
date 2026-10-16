@@ -1,0 +1,10 @@
+/* minimal theme — tokens only. Colors must be hex (canvas scenes read them). */
+[data-theme="minimal"]{
+  --bg:#0f0f0f; --bg2:#161616; --panel:#161616; --line:rgba(255,255,255,.13);
+  --ink:#e8e8e8; --muted:#8c8c8c; --head:#ffffff; --on-a:#000000;
+  --a1:#ffffff; --a2:#9a9a9a; --a3:#ffffff; --ok:#ffffff;
+  --disp:"Space Grotesk",Inter,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace; --body:"Space Grotesk",Inter,sans-serif;
+  --g:0; --cut:0px; --rad:2px; --panel-sh:none; --floor-op:0;
+  --sun:none;
+  --clip:none; --clip-btn:none;
+}

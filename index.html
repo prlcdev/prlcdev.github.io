@@ -1,0 +1,238 @@
+<!doctype html>
+<!--
+  Paulo Coelho — resume site structure (see README.md for the full guide)
+    index.html            page markup and section text
+    css/base.css          layout and components
+    css/motion.css        animations shared by every theme
+    css/themes/*.css      one file per theme: colors and fonts
+    js/data/content.js    editable content: timeline, companies, tools, globe places, boot/hero/contact text
+    js/data/geo.js        country outlines for the globe
+    js/config/themes.js   theme registry: label, background scene, effects
+    js/core/              helpers, theme switcher, parallax engine
+    js/scenes/            one animated parallax background per theme
+    js/ui/                one file per page feature
+  Default theme: change data-theme on the <html> line below.
+-->
+<html lang="en" data-theme="cyberpunk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paulo Coelho — Global IT Project &amp; PMO Leader</title>
+<meta name="description" content="Paulo Coelho, Ottawa. Senior IT Project and PMO leader with 20+ years of experience in software, systems, business transformation, and enterprise technology initiatives in multinational organizations. PMP, PSM I.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&family=Share+Tech+Mono&family=Audiowide&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/motion.css">
+<!-- themes (one file each) -->
+<link rel="stylesheet" href="css/themes/cyberpunk.css">
+<link rel="stylesheet" href="css/themes/corporate.css">
+<link rel="stylesheet" href="css/themes/matrix.css">
+<link rel="stylesheet" href="css/themes/synthwave.css">
+<link rel="stylesheet" href="css/themes/minimal.css">
+</head>
+<body>
+
+<div id="boot" aria-hidden="true"><pre id="bootTxt"></pre><span class="skip">CLICK TO SKIP</span></div>
+
+<!-- background layers: CSS effects (fx) + parallax scene canvases (js/core/parallax.js) -->
+<div class="sun"></div><div class="floor"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div class="dots"></div>
+<canvas id="scene" aria-hidden="true"></canvas><canvas id="scene-front" aria-hidden="true"></canvas>
+<div class="scan"></div><div class="glow" id="glow"></div><div id="tflash"></div>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">PAULO<span class="co">COELHO</span></div>
+    <div class="links">
+      <a href="#metrics">RESULTS</a><a href="#modules">STRENGTHS</a><a href="#missions">EXPERIENCE</a>
+      <a href="#ops">GLOBAL REACH</a><a href="#clearance">CREDENTIALS</a><a href="#contact">CONTACT</a>
+    </div>
+    <div class="theme-sw">
+      <button id="themeBtn" aria-haspopup="true" aria-expanded="false" aria-controls="themeMenu">◐ <span id="themeName">THEME</span></button>
+      <div class="theme-menu" id="themeMenu" role="menu" aria-label="Choose theme"></div>
+    </div>
+    <div class="status"><span class="led"></span><span class="txt">OPEN TO NEW ROLES</span></div>
+  </div>
+  <div id="prog"></div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="tag reveal">GLOBAL IT PROJECT &amp; PMO LEADER</div>
+    <h1 class="reveal"><span class="glitch" data-text="Paulo Coelho">Paulo Coelho</span>
+      <small>Senior IT Project and PMO leader with 20+ years of experience in software, systems, business transformation, and enterprise technology initiatives in multinational organizations. Currently leading the company-wide AI implementation at Plantum.</small>
+    </h1>
+    <div class="typed reveal"><span id="typed"></span><span class="cur"></span></div>
+    <div class="cta reveal">
+      <a class="btn" href="#contact">GET IN TOUCH</a>
+      <a class="btn mag" href="#missions">VIEW EXPERIENCE</a>
+      <a class="btn" href="https://www.linkedin.com/in/paulocoelho-pm" target="_blank" rel="noopener">LINKEDIN ↗</a>
+    </div>
+    <div class="scroll-hint">▼ SCROLL TO EXPLORE</div>
+  </section>
+
+  <!-- KPIs -->
+  <section id="metrics">
+    <div class="sec-head reveal"><span class="sec-id">[01]</span><h2>PROVEN RESULTS</h2><span class="sec-line"></span></div>
+    <div class="kpis">
+      <div class="kpi panel reveal"><div class="lbl">EXPERIENCE <b>SINCE 2006</b></div><div class="val"><span data-count="20" data-dec="0">0</span><i>+ YRS</i></div><div class="from">Software · Systems · PMO · Transformation</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--a1)" points="0,40 30,36 60,34 90,28 120,24 150,18 180,12 200,6"/></svg></div>
+      <div class="kpi panel reveal"><div class="lbl">GLOBAL PROGRAM <b>11 COUNTRIES</b></div><div class="val"><span data-count="21" data-dec="0">0</span><i> PROJECTS</i></div><div class="from">Concurrent IT &amp; business projects · Le Cordon Bleu</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--a2)" points="0,38 25,30 50,33 75,22 100,25 125,15 150,18 175,9 200,6"/></svg></div>
+      <div class="kpi panel reveal"><div class="lbl">FIRST CONTACT RESOLUTION <b>▲ +26 PTS</b></div><div class="val"><span data-count="94" data-start="68" data-dec="0">68</span><i>%</i></div><div class="from">Up from 68% · HCL at Pratt &amp; Whitney Canada</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--ok)" points="0,40 200,6"/></svg></div>
+      <div class="kpi panel reveal"><div class="lbl">MTTR WITHIN SLA <b>▲ +14 PTS</b></div><div class="val"><span data-count="92" data-start="78" data-dec="0">78</span><i>%</i></div><div class="from">Up from 78% · HCL at Pratt &amp; Whitney Canada</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--ok)" points="0,36 200,8"/></svg></div>
+      <div class="kpi panel reveal"><div class="lbl">CUSTOMER SATISFACTION <b>▲ +2.6</b></div><div class="val"><span data-count="4.7" data-start="2.1" data-dec="1">2.1</span><i> / 5</i></div><div class="from">Up from 2.1 / 5 · T-Systems</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--a3)" points="0,42 200,4"/></svg></div>
+      <div class="kpi panel reveal"><div class="lbl">PROFESSIONALS DIRECTED <b>13 STREAMS · ~€10M</b></div><div class="val"><span data-count="300" data-dec="0">0</span><i> PEOPLE</i></div><div class="from">Head of Global PLM · T-Systems</div>
+        <svg viewBox="0 0 200 46" preserveAspectRatio="none"><polyline stroke="var(--a1)" points="0,30 200,14"/></svg></div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section id="modules">
+    <div class="sec-head reveal"><span class="sec-id">[02]</span><h2>CORE STRENGTHS</h2><span class="sec-line"></span></div>
+    <div class="mods">
+      <div class="mod panel reveal"><div class="top">STRENGTH 01<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>PMO Leadership &amp; Governance</h3>
+        <p>Created and restructured PMOs at Plantum and Jesta IS: standards, governance, prioritization, workload management, and value-delivery projects.</p>
+        <div class="tags"><span>PMO</span><span>Governance</span><span>Executive Reporting</span></div><div class="bar"></div></div>
+      <div class="mod panel reveal"><div class="top">STRENGTH 02<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>AI Implementation &amp; AI SDLC</h3>
+        <p>Leads the company-wide AI implementation at Plantum. Reorganized the AI and IT group into value-driven project and R&amp;D teams.</p>
+        <div class="tags"><span>AI SDLC</span><span>R&amp;D</span><span>Change Management</span></div><div class="bar"></div></div>
+      <div class="mod panel reveal"><div class="top">STRENGTH 03<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>Global IT Project Delivery</h3>
+        <p>Scope, requirements, schedules, dependencies, risks, and issues across software, systems, and hardware teams, from automotive R&amp;D to a 21-project program in 11 countries.</p>
+        <div class="tags"><span>SDLC</span><span>V-Model</span><span>MS Project</span></div><div class="bar"></div></div>
+      <div class="mod panel reveal"><div class="top">STRENGTH 04<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>Business Analysis &amp; Requirements</h3>
+        <p>A technical foundation in software architecture, systems engineering, and enterprise applications, built as a business analyst and software architect at ExxonMobil and Volvo.</p>
+        <div class="tags"><span>Requirements</span><span>Systems Integration</span><span>Software Implementation</span></div><div class="bar"></div></div>
+      <div class="mod panel reveal"><div class="top">STRENGTH 05<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>Agile, Hybrid &amp; Waterfall Delivery</h3>
+        <p>Introduced Agile and Scrum practices at Cinco, HCL, Jesta IS, and Le Cordon Bleu, and implemented the tooling to support them.</p>
+        <div class="tags"><span>PSM I</span><span>Scrum</span><span>Jira</span><span>Azure DevOps</span></div><div class="bar"></div></div>
+      <div class="mod panel reveal"><div class="top">STRENGTH 06<span class="st"><span class="led"></span>CORE</span></div>
+        <h3>Stakeholder, Vendor &amp; Change Management</h3>
+        <p>Managed stakeholder and supplier relationships across Ford and external technology partners. Founded an organizational change management consulting practice.</p>
+        <div class="tags"><span>Stakeholders</span><span>Vendors</span><span>Change Management</span></div><div class="bar"></div></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="missions">
+    <div class="sec-head reveal"><span class="sec-id">[03]</span><h2>EXPERIENCE</h2><span class="sec-line"></span></div>
+    <div class="gantt panel reveal" id="gantt">
+      <div class="g-axis"><div>ROLE</div><div class="g-ticks" id="ticks"></div></div>
+      <div id="rows"></div>
+      <div class="g-hint">▸ SELECT A ROLE TO VIEW SCOPE, RESPONSIBILITIES AND OUTCOMES</div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO MARQUEE -->
+  <section id="portfolio" style="padding-top:60px">
+    <div class="sec-head reveal"><span class="sec-id">[04]</span><h2>ORGANIZATIONS</h2><span class="sec-line"></span></div>
+    <div class="marq reveal"><div class="marq-in" id="marq"></div></div>
+  </section>
+
+  <!-- GLOBAL OPS + STACK -->
+  <section id="ops">
+    <div class="sec-head reveal"><span class="sec-id">[05]</span><h2>GLOBAL REACH &amp; TOOLSET</h2><span class="sec-line"></span></div>
+    <div class="split">
+      <div class="globe-wrap panel reveal">
+        <canvas id="globe" aria-label="Rotating globe marking the locations listed below"></canvas>
+        <div class="legend" id="globeLegend"></div>
+        <div class="legend countries" id="countryLegend"></div>
+      </div>
+      <div class="hexes panel reveal" id="hexes"></div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="clearance">
+    <div class="sec-head reveal"><span class="sec-id">[06]</span><h2>CERTIFICATIONS &amp; EDUCATION</h2><span class="sec-line"></span></div>
+    <div class="certs">
+      <div class="cert panel reveal"><div class="code">PMP</div><div class="nm">Project Management Professional</div><div class="lvl">PMI</div></div>
+      <div class="cert panel reveal"><div class="code">PSM I</div><div class="nm">Professional Scrum Master I</div><div class="lvl">SCRUM.ORG</div></div>
+    </div>
+    <div class="edu panel reveal">
+      <div><b>Bachelor's Degree, Information Systems</b><span>Pontifícia Universidade Católica do Paraná, 2005</span></div>
+      <div><b>Graduate Studies, MSc Electrical Engineering and Industrial IT</b><span>UTFPR, 2019 (coursework completed; thesis not completed)</span></div>
+      <div><b>Graduate Studies, MSc Business Administration</b><span>Universidade Positivo, 2011 (coursework completed; thesis not completed)</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-head reveal"><span class="sec-id">[07]</span><h2>GET IN TOUCH</h2><span class="sec-line"></span></div>
+    <div class="contact-grid">
+      <div class="direct panel reveal">
+        <div><div class="k">LOCAL TIME · OTTAWA</div><div class="clock" id="clock">--:--:--</div></div>
+        <div><div class="k">EMAIL</div><div class="v"><a href="mailto:prlcjobs@proton.me">prlcjobs@proton.me</a></div></div>
+        <div><div class="k">LINKEDIN</div><div class="v"><a href="https://www.linkedin.com/in/paulocoelho-pm" target="_blank" rel="noopener">linkedin.com/in/paulocoelho-pm</a></div></div>
+        <div><div class="k">LOCATION</div><div class="v">Ottawa, ON, Canada</div></div>
+        <div><div class="k">STATUS</div><div class="v" style="color:var(--ok)">● OPEN TO NEW ROLES</div></div>
+      </div>
+      <div class="term panel reveal">
+        <div class="term-bar"><i style="background:var(--a2)"></i><i style="background:var(--a3)"></i><i style="background:var(--ok)"></i>&nbsp; paulo — new message</div>
+        <form id="ticket">
+          <div class="fld"><label for="f-name">name</label><input id="f-name" required autocomplete="name"></div>
+          <div class="fld"><label for="f-org">company</label><input id="f-org" autocomplete="organization"></div>
+          <div class="fld"><label for="f-type">topic</label>
+            <select id="f-type">
+              <option>Full-time / permanent role</option><option>Contract role</option><option>Consulting engagement</option><option>Other</option>
+            </select></div>
+          <div class="fld"><label for="f-msg">details</label><textarea id="f-msg" rows="3" required></textarea></div>
+          <div class="cta" style="margin-top:22px"><button class="btn" type="submit">SEND MESSAGE ▸</button></div>
+          <div class="out" id="out"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><span>© <span id="yr">2026</span> PAULO COELHO · GLOBAL IT PROJECT &amp; PMO LEADER</span><span>OTTAWA · ONTARIO · CANADA</span></footer>
+
+<div id="shade"></div>
+<aside id="drawer" aria-hidden="true">
+  <button class="d-close" id="dClose">CLOSE ✕</button>
+  <div class="d-id" id="dId"></div>
+  <h3 id="dCo"></h3>
+  <div class="d-role" id="dRole"></div>
+  <div class="d-meta"><div><b>DURATION</b><span id="dPer"></span></div><div><b>LOCATION</b><span id="dLoc"></span></div></div>
+  <p id="dSum"></p>
+  <ul id="dList"></ul>
+</aside>
+
+<!-- data -->
+<script src="js/data/content.js"></script>
+<script src="js/data/geo.js"></script>
+<!-- core -->
+<script src="js/core/util.js"></script>
+<script src="js/config/themes.js"></script>
+<script src="js/core/parallax.js"></script>
+<!-- parallax background scenes (one per theme) -->
+<script src="js/scenes/rain.js"></script>
+<script src="js/scenes/holo.js"></script>
+<script src="js/scenes/horizon.js"></script>
+<script src="js/scenes/bokeh.js"></script>
+<script src="js/scenes/constellation.js"></script>
+<!-- theme switcher + page features -->
+<script src="js/core/theme.js"></script>
+<script src="js/ui/boot.js"></script>
+<script src="js/ui/hero.js"></script>
+<script src="js/ui/interactions.js"></script>
+<script src="js/ui/reveal.js"></script>
+<script src="js/ui/timeline.js"></script>
+<script src="js/ui/portfolio.js"></script>
+<script src="js/ui/globe.js"></script>
+<script src="js/ui/contact.js"></script>
+<!-- start -->
+<script src="js/main.js"></script>
+</body>
+</html>

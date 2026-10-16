@@ -1,0 +1,9 @@
+/* synthwave theme — tokens only. Colors must be hex (canvas scenes read them). */
+[data-theme="synthwave"]{
+  --bg:#14072b; --bg2:#1d0b3d; --panel:rgba(32,10,64,.74); --line:rgba(255,110,199,.24);
+  --ink:#f3e8ff; --muted:#b49ad6; --head:#ffffff; --on-a:#14072b;
+  --a1:#ff6ec7; --a2:#ffb03b; --a3:#fff35c; --ok:#4dfff3;
+  --disp:Audiowide,"Segoe UI",sans-serif; --mono:"Space Mono",ui-monospace,monospace; --body:Inter,system-ui,sans-serif;
+  --g:1; --cut:14px; --rad:4px; --panel-sh:none; --floor-op:.38;
+  --sun:linear-gradient(#ffe259 10%,#ff9a3d 45%,#ff3f8e 80%);
+}

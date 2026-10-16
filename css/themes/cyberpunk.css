@@ -1,0 +1,9 @@
+/* cyberpunk theme — tokens only. Colors must be hex (canvas scenes read them). */
+[data-theme="cyberpunk"]{
+  --bg:#05050b; --bg2:#0d0d1d; --panel:rgba(14,14,30,.72); --line:rgba(0,240,255,.18);
+  --ink:#dfe7f5; --muted:#8a93ad; --head:#ffffff; --on-a:#000000;
+  --a1:#00f0ff; --a2:#ff2bd6; --a3:#f5ff3b; --ok:#3dff9a;
+  --disp:Orbitron,"Segoe UI",sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; --body:Inter,system-ui,sans-serif;
+  --g:1; --cut:16px; --rad:4px; --panel-sh:none; --floor-op:.16;
+  --sun:radial-gradient(circle,rgba(255,43,214,.22),rgba(0,240,255,.06) 45%,transparent 70%);
+}

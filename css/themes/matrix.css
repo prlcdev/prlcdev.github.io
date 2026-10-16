@@ -1,0 +1,9 @@
+/* matrix theme — tokens only. Colors must be hex (canvas scenes read them). */
+[data-theme="matrix"]{
+  --bg:#000000; --bg2:#020a03; --panel:rgba(0,10,2,.84); --line:rgba(0,255,65,.24);
+  --ink:#c8f7d2; --muted:#5fae73; --head:#e8ffe9; --on-a:#000000;
+  --a1:#00ff41; --a2:#7dffb0; --a3:#d4ff00; --ok:#00ff41;
+  --disp:"Share Tech Mono",ui-monospace,monospace; --mono:"Share Tech Mono",ui-monospace,monospace; --body:"IBM Plex Mono",ui-monospace,monospace;
+  --g:1; --cut:10px; --rad:2px; --panel-sh:none; --floor-op:0;
+  --sun:none;
+}

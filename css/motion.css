@@ -1,0 +1,106 @@
+/* Paulo Coelho resume site — motion layer: entry animations, hover motion, ambient CSS effects. Applies to every theme. */
+/* =====================================================================
+   MOTION LAYER — applies to every theme
+   ===================================================================== */
+/* extra ambient backgrounds (toggled per theme) */
+.aurora,.dots{display:none}
+.fx-aurora .aurora,.fx-dots .dots{display:block}
+.aurora{position:fixed;inset:-20%;z-index:-4;pointer-events:none;filter:blur(80px);opacity:.2}
+.aurora i{position:absolute;width:42vmax;height:42vmax;border-radius:50%;animation:drift 22s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:var(--a1);left:8%;top:12%}
+.aurora i:nth-child(2){background:var(--a2);right:6%;top:32%;animation-duration:28s;animation-delay:-7s}
+.aurora i:nth-child(3){background:var(--a3);left:32%;bottom:2%;animation-duration:34s;animation-delay:-13s}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(12vw,-8vh) scale(1.2)}100%{transform:translate(-10vw,10vh) scale(.9)}}
+.dots{position:fixed;inset:0;z-index:-3;pointer-events:none;background-image:radial-gradient(color-mix(in srgb,var(--a1) 30%,transparent) 1.2px,transparent 1.5px);
+  background-size:28px 28px;animation:dotsmove 14s linear infinite;
+  mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%)}
+@keyframes dotsmove{to{background-position:28px 28px}}
+
+/* scroll progress */
+#prog{position:absolute;left:0;bottom:-1px;height:2px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--a2),var(--a1));box-shadow:0 0 calc(10px*var(--g)) var(--a1)}
+
+/* intro after boot: nav + hero words */
+.ready .logo{animation:navin .6s backwards}
+.ready .links a{animation:navin .5s backwards}
+.ready .theme-sw,.ready .status{animation:navin .5s .55s backwards}
+@keyframes navin{from{opacity:0;transform:translateY(-12px)}}
+.hero small .w{display:inline-block}
+.ready .hero small .w{animation:wordin .7s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes wordin{from{opacity:0;transform:translateY(.7em);filter:blur(6px)}}
+.logo .lt{display:inline-block;animation:wave 7s ease-in-out infinite}
+@keyframes wave{0%,10%,100%{transform:none}5%{transform:translateY(-4px)}}
+
+/* hero scroll parallax (values set by script) */
+.hero .glitch{transform:translateY(calc(var(--hy,0) * .35px))}
+.hero .typed{transform:translateY(calc(var(--hy,0) * .18px))}
+.hero{opacity:var(--ho,1)}
+
+/* section headings */
+.sec-id{animation:flick 5s steps(1) infinite}
+@keyframes flick{0%,90%,100%{opacity:1}91%{opacity:.2}93%{opacity:1}95%{opacity:.4}96%{opacity:1}}
+.sec-line{background:linear-gradient(90deg,var(--a1),var(--a2),var(--a1),transparent);background-size:300% 100%}
+.in .sec-line{animation:lineflow 5s linear 1.2s infinite}
+@keyframes lineflow{to{background-position:-300% 0}}
+
+/* cards: tilt + spotlight (script adds .tilt) */
+.tilt::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .3s;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--a1) 13%,transparent),transparent 70%)}
+.tilt:hover::before{opacity:1}
+.btn,#themeBtn{transition:color .3s,box-shadow .3s,border-color .3s,transform .25s cubic-bezier(.2,.8,.2,1)}
+
+/* KPI value flicker */
+.kpi.in .val{animation:valflick 8s ease-in-out 2.4s infinite}
+@keyframes valflick{0%,95%,100%{opacity:1}96%{opacity:.5}97%{opacity:1}98%{opacity:.7}}
+
+/* module tags pop */
+.mod.in .tags span{animation:pop .45s cubic-bezier(.3,1.6,.5,1) backwards}
+.mod.in .tags span:nth-child(1){animation-delay:.45s}.mod.in .tags span:nth-child(2){animation-delay:.55s}
+.mod.in .tags span:nth-child(3){animation-delay:.65s}.mod.in .tags span:nth-child(4){animation-delay:.75s}
+@keyframes pop{from{opacity:0;transform:scale(.5)}}
+.mod .led,.mod .st{animation:pulse 1.6s ease-in-out infinite}
+
+/* gantt: rows slide in, bar shimmer, timeline scanner */
+.gantt.in .g-row{animation:rowin .55s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes rowin{from{opacity:0;transform:translateX(-24px)}}
+.g-bar{overflow:hidden}
+.g-bar::after{content:"";position:absolute;inset:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-120%);animation:barshine 3.5s ease-in-out 2s infinite}
+@keyframes barshine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+.g-track::after{content:"";position:absolute;top:-4px;bottom:-4px;left:0;width:1px;background:var(--a1);opacity:0;box-shadow:0 0 calc(8px*var(--g)) var(--a1)}
+.gantt.in .g-track::after{animation:gscan 7s linear 1.6s infinite}
+@keyframes gscan{0%{left:0;opacity:0}5%{opacity:.6}95%{opacity:.6}100%{left:100%;opacity:0}}
+
+/* marquee companies: wave brightness */
+.marq-in span{animation:mglow 6s ease-in-out infinite}
+.marq-in span:nth-child(3n+1){animation-delay:-2s}.marq-in span:nth-child(3n+2){animation-delay:-4s}
+@keyframes mglow{0%,100%{-webkit-text-stroke-color:color-mix(in srgb,var(--a1) 55%,transparent)}50%{-webkit-text-stroke-color:var(--a2)}}
+
+/* globe legend sequence + hex float */
+.legend span{animation:legend 4.8s ease-in-out infinite}
+.legend span:nth-child(2){animation-delay:.6s}.legend span:nth-child(3){animation-delay:1.2s}.legend span:nth-child(4){animation-delay:1.8s}
+.legend span:nth-child(5){animation-delay:2.4s}.legend span:nth-child(6){animation-delay:3s}.legend span:nth-child(7){animation-delay:3.6s}.legend span:nth-child(8){animation-delay:4.2s}
+@keyframes legend{0%,20%,100%{color:var(--muted)}8%{color:var(--head)}}
+.hexes.in .hex{animation:hexin .5s cubic-bezier(.3,1.5,.5,1) backwards}
+@keyframes hexin{from{opacity:0;transform:scale(.3) rotate(-30deg)}}
+
+/* clearances + education */
+.cert.in .code{animation:flipin .9s .15s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes flipin{from{opacity:0;transform:perspective(400px) rotateX(90deg)}}
+.cert.in .lvl{animation:typein 1s .7s steps(13) both;overflow:hidden;white-space:nowrap}
+@keyframes typein{from{max-width:0}to{max-width:14em}}
+.edu.in>div{animation:rowin .6s cubic-bezier(.2,.8,.2,1) backwards}
+.edu.in>div:nth-child(2){animation-delay:.12s}.edu.in>div:nth-child(3){animation-delay:.24s}.edu.in>div:nth-child(4){animation-delay:.36s}
+
+/* contact */
+.term-bar i{animation:pulse 2.2s ease-in-out infinite}
+.term-bar i:nth-child(2){animation-delay:.3s}.term-bar i:nth-child(3){animation-delay:.6s}
+.clock.tick{animation:tick .4s ease-out}
+@keyframes tick{from{opacity:.35;transform:translateY(-4px)}}
+.term.in .fld{animation:rowin .5s cubic-bezier(.2,.8,.2,1) backwards}
+.term.in .fld:nth-child(2){animation-delay:.1s}.term.in .fld:nth-child(3){animation-delay:.2s}.term.in .fld:nth-child(4){animation-delay:.3s}
+footer>span:last-child::after{content:"_";margin-left:4px;animation:blink 1s steps(1) infinite}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  .g-bar{transform:none} .kpi polyline{stroke-dashoffset:0} .sec-line{transform:none}
+}
