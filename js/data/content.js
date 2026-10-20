@@ -1,13 +1,13 @@
 /* =====================================================================
    CONTENT — edit text and data here. No layout or styling in this file.
-   Source of truth: Paulo_Coelho_Resume.txt. Keep this file aligned with it.
+   Source of truth: master resume copy. Keep this file aligned with it.
    ===================================================================== */
 const NOW=new Date(), NOW_Y=NOW.getFullYear()+NOW.getMonth()/12;
 
 const CONTENT = {
 
   /* Boot screen lines (shown once per visit) */
-  bootLines: ['PAULO COELHO · GLOBAL IT PROJECT & PMO LEADER','> Experience ......................... 20+ YEARS','> PMO governance & delivery .......... READY',
+  bootLines: ['GLOBAL IT PROJECT & PMO LEADER','> Experience ......................... 20+ YEARS','> PMO governance & delivery .......... READY',
     '> Portfolio: 21 projects · 11 countries READY','> AI implementation .................. ACTIVE','> Certifications: PMP · PSM I',
     '> Welcome.'],
 
@@ -21,7 +21,7 @@ const CONTENT = {
   email: 'prlcjobs@proton.me',
 
   /* LinkedIn profile */
-  linkedin: 'https://www.linkedin.com/in/paulocoelho-pm',
+  linkedin: 'https://www.linkedin.com/',
 
   /* Experience timeline. s/e = start/end as decimal years; b = bullet points shown in the brief.
      Listed oldest → newest; the page shows newest first. now: true marks the current role. */
@@ -43,7 +43,7 @@ const CONTENT = {
      'Improved customer satisfaction from 2.1 to 4.7/5 through the Operational Development program.']},
  {co:'Cinco',role:'Activation Producer / IT Functional Manager',loc:'Montreal, QC',per:'Aug 2018 – Dec 2018',s:2018.58,e:2019,
   sum:'Directed major projects and managed the IT delivery team.',
-  b:['Restructured processes, tools, methodologies, and operating practices.','Introduced Jira and Agile across the IT organization.','Provided strategic consulting and delivery guidance to company leadership.']},
+  b:['Restructured processes, tools, methodologies, and operating practices.','Introduced Jira and Agile across the IT organization.','Provided strategic consulting and delivery guidance to company leadership and stakeholders.','Improved delivery execution and operational clarity across the IT function.']},
  {co:'HCL — at Pratt & Whitney Canada',role:'PLM Manager / Group Project Manager',loc:'Longueuil, QC',per:'Feb 2019 – Oct 2019',s:2019.08,e:2019.75,
   sum:'Managed PLM support services and project delivery while liaising with executives, project managers, business owners, and technical teams.',
   b:['Restructured teams and processes to improve operational efficiency and service delivery.','Implemented Scrum, automated reporting, live dashboards, and structured patch-delivery scheduling.',
@@ -51,7 +51,7 @@ const CONTENT = {
      'Initiated an AI chat project to improve customer support and service delivery.']},
  {co:'Jesta IS',role:'Senior IT Project Manager / PMO Head',loc:'Montreal, QC',per:'Oct 2019 – Apr 2020',s:2019.75,e:2020.33,
   sum:'Led the Project Management Office and transformed project governance and delivery practices.',
-  b:['Restructured PMO processes and integrated Project Managers, Business Analysts, and Account Managers.','Established project management standards, governance, prioritization, workload management, and Agile delivery practices.',
+  b:['Restructured PMO processes and integrated Project Managers, Business Analysts, and Account Managers.','Established project management standards, governance, prioritization, workload management, and executive reporting.',
      'Mentored PMO members and trained Account Managers, Software Architects, DBAs, and Business Analysts.',
      'Managed two business-critical projects through stakeholder alignment, contract renegotiation, milestone restructuring, and delivery improvements.',
      'Improved software development, testing, release management, and deployment processes.']},
@@ -87,7 +87,7 @@ const CONTENT = {
   tools: ['AI SDLC','Azure DevOps','Jira','MS Project','Power BI','Power Automate','SharePoint','MS Teams','Agile','Scrum','Waterfall','V-Model','SDLC','ITIL'],
 
   /* Globe markers: [label, latitude, longitude]. The first one is "home" (arcs start there). */
-  places: [['Ottawa',45.42,-75.70],['Montreal',45.50,-73.57],['Shippensburg',40.05,-77.52],['Curitiba',-25.43,-49.27],['Blumenau',-26.92,-49.07],['São Paulo',-23.55,-46.63],['Gothenburg',57.71,11.97]],
+  places: [['Ottawa',45.42,-75.70],['Montreal',45.50,-73.57],['Shippensburg',40.05,-77.52],['Curitiba',-25.43,-49.27],['Blumenau',-26.92,-49.07],['São Paulo',-23.55,-46.63],['Gothenburg',57.71,11.97],['Toronto',43.65,-79.38]],
 
   /* Countries outlined on the globe — names must match keys in js/data/geo.js */
   countriesWorkedIn: ['Canada','United States','Brazil','Sweden']
