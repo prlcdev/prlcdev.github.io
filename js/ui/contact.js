@@ -4,7 +4,7 @@
    (opens the visitor's mail app addressed to CONTENT.email).
    ===================================================================== */
 function clk(){try{const c=document.getElementById('clock');c.textContent=new Date().toLocaleTimeString('en-CA',{timeZone:'America/Toronto',hour12:false});
-  c.classList.remove('tick');void c.offsetWidth;c.classList.add('tick');}catch(e){}}
+  c.classList.remove('tick');void c.offsetWidth;c.classList.add('tick');}catch(e){} }
 clk();setInterval(clk,1000);
 try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
 
@@ -25,8 +25,14 @@ try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e)
 document.getElementById('ticket').addEventListener('submit',e=>{
   e.preventDefault();
   const v=id=>document.getElementById(id).value.trim();
-  const sub=`Message for Paulo: ${v('f-type')} — ${v('f-name')}${v('f-org')?', '+v('f-org'):''}`;
-  const body=`Hello Paulo,\n\n${v('f-msg')}\n\n— ${v('f-name')}${v('f-org')?'\n'+v('f-org'):''}\nTopic: ${v('f-type')}`;
+  const sub=`Message for the team: ${v('f-type')} — ${v('f-name')}${v('f-org')?', '+v('f-org'):''}`;
+  const body=`Hello,
+
+${v('f-msg')}
+
+— ${v('f-name')}${v('f-org')?'
+'+v('f-org'):''}
+Topic: ${v('f-type')}`;
   document.getElementById('out').textContent='> Preparing your email. Your mail app will open with the details filled in.';
   location.href=`mailto:${CONTENT.email}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`;
 });

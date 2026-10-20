@@ -1,8 +1,8 @@
-# Paulo Coelho — resume site
+# Resume site
 
 Live at https://prlcdev.github.io. Static site with no build step, served by GitHub Pages from the `main` branch. Open `index.html` locally to preview.
 
-**Source of truth:** the resume (`Paulo_Coelho_Resume.txt`). Any change to experience, certifications, or education goes there first, then into `js/data/content.js` and `index.html`.
+**Source of truth:** the resume copy in the project. Any change to experience, certifications, or education goes there first, then into `js/data/content.js` and `index.html`.
 
 ## Folder map
 
@@ -31,7 +31,7 @@ Live at https://prlcdev.github.io. Static site with no build step, served by Git
 | Synthwave Sunset | `scenes/horizon.js` | Twinkling stars, wireframe mountains, shooting stars |
 | Minimal Mono | `scenes/constellation.js` | Depth particles with a mouse-reactive constellation |
 
-Every scene uses the same engine. Each scene has 4–5 depth layers from far to near, plus a blurred foreground. Each layer moves at its own rate with scroll, mouse and a slow camera sway, which creates the depth.
+Every scene uses the same engine. Each scene has 4–5 depth layers from far to near, plus a blurred foreground. Each layer moves at its own rate with scroll, mouse and a slow camera sway, which creates a rich, layered motion background.
 
 ### Tuning a scene
 
