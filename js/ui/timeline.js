@@ -3,9 +3,9 @@
    Builds the Gantt rows from CONTENT.missions and the slide-in role brief.
    ===================================================================== */
 const M=CONTENT.missions.slice().reverse();
-const Y0=2006,Y1=Math.max(2027,Math.ceil(NOW_Y)),pct=y=>((y-Y0)/(Y1-Y0)*100);
+const Y0=2003,Y1=Math.max(2027,Math.ceil(NOW_Y)),pct=y=>((y-Y0)/(Y1-Y0)*100);
 const ticks=document.getElementById('ticks');
-[2006,2010,2014,2018,2022,2026].forEach(y=>{const s=document.createElement('span');s.style.left=pct(y)+'%';s.textContent=y;ticks.appendChild(s);});
+[2003,2007,2011,2015,2019,2023,2027].forEach(y=>{const s=document.createElement('span');s.style.left=pct(y)+'%';s.textContent=y;ticks.appendChild(s);});
 const rows=document.getElementById('rows');
 M.forEach((m,i)=>{
   const r=document.createElement('div');r.className='g-row';r.tabIndex=0;r.setAttribute('role','button');
