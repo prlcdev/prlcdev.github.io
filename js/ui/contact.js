@@ -1,11 +1,8 @@
 /* =====================================================================
    CONTACT
-   Ottawa clock, animated placeholder in the details field, and the inquiry form
+   Animated placeholder in the details field, and the inquiry form
    (opens the visitor's mail app addressed to CONTENT.email).
    ===================================================================== */
-function clk(){try{const c=document.getElementById('clock');c.textContent=new Date().toLocaleTimeString('en-CA',{timeZone:'America/Toronto',hour12:false});
-  c.classList.remove('tick');void c.offsetWidth;c.classList.add('tick');}catch(e){} }
-clk();setInterval(clk,1000);
 try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
 
 
