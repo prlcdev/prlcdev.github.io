@@ -14,7 +14,7 @@
   (function wrap(node){[...node.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();
     [...n.textContent].forEach(ch=>{const s=document.createElement('span');s.className='lt';s.textContent=ch;s.style.animationDelay=(li0++*.12)+'s';f.appendChild(s);});
     n.replaceWith(f);}else wrap(n);});})(logo);
-  const sm=document.querySelector('.hero h1 small');
+  const sm=document.querySelector('.hero .hero-sum');
   sm.innerHTML=sm.textContent.trim().split(/\s+/).map((w,i)=>`<span class="w" style="animation-delay:${.15+i*.035}s">${w}</span>`).join(' ');
   document.querySelectorAll('.links a').forEach((a,i)=>a.style.animationDelay=(.1+i*.07)+'s');
   if(RM||seen){end();return;}

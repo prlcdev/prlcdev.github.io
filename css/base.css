@@ -258,3 +258,4 @@ footer{max-width:1180px;margin:80px auto 0;padding:24px 16px 40px;border-top:1px
 .agent-hello .ah-title{font:600 .8rem var(--mono);letter-spacing:.12em;color:var(--a2);text-transform:uppercase;margin-bottom:10px}
 .agent-hello .ah-sign{margin:10px 0 0;color:var(--muted);font-size:.85rem}
 @media (max-width:600px){.agent-hello{padding:14px 16px;font-size:.88rem}}
+.hero-sum{font:500 clamp(1.05rem,2.4vw,1.4rem)/1.45 var(--body);color:var(--ink);max-width:760px;margin:6px 0 0}

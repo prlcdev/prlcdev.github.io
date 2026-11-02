@@ -24,8 +24,8 @@
 .ready .links a{animation:navin .5s backwards}
 .ready .theme-sw,.ready .status{animation:navin .5s .55s backwards}
 @keyframes navin{from{opacity:0;transform:translateY(-12px)}}
-.hero small .w{display:inline-block}
-.ready .hero small .w{animation:wordin .7s cubic-bezier(.2,.8,.2,1) backwards}
+.hero small .w,.hero-sum .w{display:inline-block}
+.ready .hero small .w,.ready .hero-sum .w{animation:wordin .7s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes wordin{from{opacity:0;transform:translateY(.7em);filter:blur(6px)}}
 .logo .lt{display:inline-block;animation:wave 7s ease-in-out infinite}
 @keyframes wave{0%,10%,100%{transform:none}5%{transform:translateY(-4px)}}
