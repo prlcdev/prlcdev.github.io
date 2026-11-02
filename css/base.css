@@ -251,3 +251,10 @@ footer{max-width:1180px;margin:80px auto 0;padding:24px 16px 40px;border-top:1px
 .ag-dot{width:10px;height:10px;border-radius:50%;border:1px solid var(--a1);background:transparent;cursor:pointer;padding:0}
 .ag-dot.on{background:var(--a1)}
 @media (prefers-reduced-motion: reduce){.ag-slide.in{animation:none}}
+
+/* ---------- agent hello panel (top of hero) ---------- */
+.agent-hello{max-width:760px;margin:0 0 34px;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--a2);border-radius:var(--rad);color:var(--ink);font:400 .92rem/1.55 var(--body)}
+.agent-hello p{margin:0 0 8px}
+.agent-hello .ah-title{font:600 .8rem var(--mono);letter-spacing:.12em;color:var(--a2);text-transform:uppercase;margin-bottom:10px}
+.agent-hello .ah-sign{margin:10px 0 0;color:var(--muted);font-size:.85rem}
+@media (max-width:600px){.agent-hello{padding:14px 16px;font-size:.88rem}}
