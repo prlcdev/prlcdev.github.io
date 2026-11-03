@@ -7,12 +7,12 @@ const NOW=new Date(), NOW_Y=NOW.getFullYear()+NOW.getMonth()/12;
 const CONTENT = {
 
   /* Boot screen lines (shown once per visit) */
-  bootLines: ['PAULO · TECHNOLOGY GOVERNANCE & APM','> Experience ......................... 20+ YEARS','> Application Portfolio Management ... READY',
+  bootLines: ['PAULO · AI & TECHNOLOGY GOVERNANCE','> Experience ......................... 20+ YEARS','> Application Portfolio Management ... READY',
     '> IT & AI governance ................. READY','> Generative AI implementation ....... ACTIVE','> Certifications: PMP · PSM I',
     '> Welcome.'],
 
   /* Rotating line under the hero text */
-  heroRotator: ['> Application Portfolio Management','> IT Governance & Technology Standards','> AI Governance & Agentic AI','> Operating Models & KPIs','> PMO Leadership & Executive Reporting'],
+  heroRotator: ['> AI Governance & Agentic AI','> Application Portfolio Management','> IT Governance & Technology Standards','> Operating Models & KPIs','> PMO Leadership & Executive Reporting'],
 
   /* Example suggestions typed into the contact "details" field */
   contactPlaceholders: ['Briefly describe the role or project…','e.g. IT or AI governance role in Ottawa','e.g. Application portfolio rationalization','e.g. Lead a company-wide AI implementation'],
