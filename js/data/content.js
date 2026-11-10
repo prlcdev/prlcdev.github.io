@@ -21,7 +21,7 @@ const CONTENT = {
   email: 'prlcjobs@proton.me',
 
   /* LinkedIn profile */
-  linkedin: 'https://www.linkedin.com/',
+  linkedin: 'https://www.linkedin.com/in/paulocoelho-pm',
 
   /* Experience timeline. s/e = start/end as decimal years; b = bullet points shown in the brief.
      Listed oldest → newest; the page shows newest first. now: true marks the current role. */

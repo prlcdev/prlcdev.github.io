@@ -1,0 +1,11 @@
+/* royal theme — tokens only. Colors must be hex (canvas scenes read them).
+   Deep royal blue with gold and light-blue accents. */
+[data-theme="royal"]{
+  --bg:#001a36; --bg2:#00244a; --panel:#002a55; --line:rgba(255,255,255,.14);
+  --ink:#e9f0f8; --muted:#a9bdd3; --head:#ffffff; --on-a:#001a36;
+  --a1:#ffd200; --a2:#6cb4ff; --a3:#ffe680; --ok:#5fd39a;
+  --disp:"Space Grotesk",Inter,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace; --body:Inter,system-ui,sans-serif;
+  --g:.35; --cut:0px; --rad:8px; --panel-sh:0 1px 2px rgba(0,0,0,.25),0 12px 32px rgba(0,0,0,.28); --floor-op:0;
+  --sun:none;
+  --clip:none; --clip-btn:none;
+}

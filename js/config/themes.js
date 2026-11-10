@@ -20,7 +20,8 @@ const THEMES = {
   corporate: { label:'Corporate Light',  scene:'bokeh',         fx:['aurora','dots','glow'],                            sw:['#f5f6f8','#1f5f8b','#d1495b'] },
   matrix:    { label:'Matrix',           scene:'rain',          fx:['scan','glitch','glow'],                            sw:['#000000','#00ff41','#7dffb0'] },
   synthwave: { label:'Synthwave Sunset', scene:'horizon',       fx:['floor','sun','sunstripes','scan','glitch','glow'], sw:['#14072b','#ff6ec7','#ffb03b'] },
-  minimal:   { label:'Minimal Mono',     scene:'constellation', fx:['glow'],                                            sw:['#0f0f0f','#ffffff','#9a9a9a'] }
+  minimal:   { label:'Minimal Mono',     scene:'constellation', fx:['glow'],                                            sw:['#0f0f0f','#ffffff','#9a9a9a'] },
+  royal:     { label:'Royal Blue',       scene:'bokeh',         fx:['dots','glow'],                                     sw:['#001a36','#ffd200','#6cb4ff'] }
 };
 
 /* Default theme = the data-theme attribute on <html> in index.html */
