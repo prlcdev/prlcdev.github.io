@@ -14,7 +14,12 @@
   const SLOTS=[[8,-6,'left'],[8,14,'left'],[-8,-6,'right'],[-8,14,'right'],[16,-22,'left'],[16,30,'left'],[-16,-22,'right'],[-16,30,'right'],
                [26,4,'left'],[-26,4,'right'],[0,-26,'center'],[0,36,'center'],[30,-38,'left'],[30,46,'left'],[-30,-38,'right'],[-30,46,'right']];
   const lastSlot={};
-  let W,H,R,rot=60,tilt=18;
+  /* Start centred on the Americas (lon -62 faces the viewer: proj puts lon=-rot at the front),
+     between Ottawa/Montreal/Shippensburg (about -75) and Curitiba/Sao Paulo (about -48).
+     Hold still for HOLD ms after the globe first scrolls into view, then rotate. */
+  let W,H,R,rot=62,tilt=12;
+  const HOLD=6000;let seenAt=0;
+  new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)&&!seenAt)seenAt=performance.now();},{threshold:.35}).observe(cv);
   function size(){const r=cv.getBoundingClientRect(),dpr=window.devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);R=Math.min(W,H)*.4;}
   size();addEventListener('resize',size);
   function proj(lat,lon,lift=1){const p=lat*D,l=(lon+rot)*D,t=tilt*D;
@@ -69,7 +74,7 @@
       ctx.fillStyle=rgba(TC.bg,.78);ctx.fillRect(pick.b.x,pick.b.y,pick.b.w,pick.b.h);
       ctx.fillStyle=TC.ink;ctx.textAlign=pick.al;ctx.fillText(txt,pick.lx,pick.ly);});
     ctx.textAlign='left';
-    if(!RM)rot+=0.12;
+    if(!RM&&seenAt&&now-seenAt>HOLD)rot+=0.12;
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);

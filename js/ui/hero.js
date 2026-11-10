@@ -1,19 +1,19 @@
 /* =====================================================================
    HERO ROTATOR
-   Types and deletes each line of CONTENT.heroRotator under the headline.
+   Types each line of CONTENT.heroRotator under the headline and keeps it.
    ===================================================================== */
 (function(){
+  /* Types each line of CONTENT.heroRotator once, one under the other, and
+     keeps them all on screen. Nothing is erased. */
   const el=document.getElementById('typed');
   const words=CONTENT.heroRotator;
-  if(RM){el.textContent=words[0];return;}
-  let w=0,c=0,del=false;
+  el.style.whiteSpace='pre-line';
+  if(RM){el.textContent=words.join('\n');return;}
+  let w=0,c=0,done='';
   (function tick(){
     const s=words[w];
-    el.textContent=s.slice(0,c);
-    if(!del&&c<s.length){c++;setTimeout(tick,55);}
-    else if(!del){del=true;setTimeout(tick,1600);}
-    else if(c>0){c--;setTimeout(tick,25);}
-    else{del=false;w=(w+1)%words.length;setTimeout(tick,300);}
+    el.textContent=done+s.slice(0,c);
+    if(c<s.length){c++;setTimeout(tick,55);}
+    else if(w<words.length-1){done+=s+'\n';w++;c=0;setTimeout(tick,700);}
   })();
 })();
-
