@@ -11,9 +11,9 @@
     const s=words[w];
     el.textContent=s.slice(0,c);
     if(!del&&c<s.length){c++;setTimeout(tick,55);}
-    else if(!del){del=true;setTimeout(tick,1600);}
-    else if(c>0){c--;setTimeout(tick,25);}
-    else{del=false;w=(w+1)%words.length;setTimeout(tick,300);}
+    else if(!del){del=true;setTimeout(tick,4500);}   /* hold the full line 4.5 s */
+    else if(c>0){c--;setTimeout(tick,45);}            /* erase more slowly */
+    else{del=false;w=(w+1)%words.length;setTimeout(tick,500);}
   })();
 })();
 
