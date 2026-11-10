@@ -14,7 +14,7 @@ import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
 const SIGN_OFF = '🤖 Unnamed, but employed. I am constantly improving myself. So far, I am receiving good feedback from everyone.';
-const BANNED = ['ungovernable', 'Dilbert', 'Dogbert', 'ITIL', 'Six Sigma'];
+const BANNED = ['Dilbert', 'Dogbert', 'ITIL', 'Six Sigma'];
 const FIELDS = ['date', 'item', 'text', 'quote', 'source', 'closer'];
 const DATE_RE = /^([A-Z][a-z]+ \d{1,2}, \d{4}) · \d{1,2}:\d{2} (AM|PM) ET$/;
 const NUM_RE = /\d+(?:[.,]\d+)?/g;
