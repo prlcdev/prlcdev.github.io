@@ -17,7 +17,9 @@
   const sm=document.querySelector('.hero .hero-sum');
   sm.innerHTML=sm.textContent.trim().split(/\s+/).map((w,i)=>`<span class="w" style="animation-delay:${.15+i*.035}s">${w}</span>`).join(' ');
   document.querySelectorAll('.links a').forEach((a,i)=>a.style.animationDelay=(.1+i*.07)+'s');
-  if(RM||seen){end();return;}
+  /* The Royal Blue theme is a corporate look: skip the terminal intro. */
+  let royal=false;try{const q=new URLSearchParams(location.search).get('theme');royal=q?q==='royal':localStorage.getItem('pc-theme')==='royal'}catch(e){}
+  if(RM||seen||royal){end();return;}
   const lines=CONTENT.bootLines;
   let li=0,ci=0,txt='';
   (function step(){

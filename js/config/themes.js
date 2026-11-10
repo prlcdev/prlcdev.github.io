@@ -21,7 +21,7 @@ const THEMES = {
   matrix:    { label:'Matrix',           scene:'rain',          fx:['scan','glitch','glow'],                            sw:['#000000','#00ff41','#7dffb0'] },
   synthwave: { label:'Synthwave Sunset', scene:'horizon',       fx:['floor','sun','sunstripes','scan','glitch','glow'], sw:['#14072b','#ff6ec7','#ffb03b'] },
   minimal:   { label:'Minimal Mono',     scene:'constellation', fx:['glow'],                                            sw:['#0f0f0f','#ffffff','#9a9a9a'] },
-  royal:     { label:'Royal Blue',       scene:'bokeh',         fx:['dots','glow'],                                     sw:['#001a36','#ffd200','#6cb4ff'] }
+  royal:     { label:'Royal Blue',       scene:null,            fx:[],                                                  sw:['#003168','#ffd200','#ffffff'] }
 };
 
 /* Default theme = the data-theme attribute on <html> in index.html */
