@@ -71,7 +71,7 @@ const CONTENT = {
  {co:'Syntronic — at Gentex',role:'Senior Project Manager, Software and Systems',loc:'Kanata, ON',per:'Mar 2024 – Jun 2025',s:2024.17,e:2025.5,
   sum:'Coordinated about 13 technical resources across software, embedded, systems, architecture, testing, hardware and electrical engineering.',
   b:['Governed delivery under SDLC and V-Model frameworks.','Reported status, risks and dependencies to Toyota\'s program manager.']},
- {co:'Plantum',role:'Transformation Portfolio Manager',loc:'Brazil (Remote)',per:'Aug 2025 – Present',s:2025.58,e:Math.max(2025.75,NOW_Y),now:true,
+ {co:'Plantum',role:'CTO & COO (Aug 2026 – Present) · Transformation Portfolio Manager (Aug 2025 – Aug 2026)',loc:'Brazil (Remote)',per:'Aug 2025 – Present',s:2025.58,e:Math.max(2025.75,NOW_Y),now:true,
   sum:'Leads the company-wide generative AI implementation, including use-case selection, prioritization by business value, team structure and adoption.',
   b:['Manages the AI project portfolio and leads a confidential AI R&D program for monitoring large forestry areas.']},
  {co:'AI Agent Designer and Operator (Independent)',role:'GitHub: prlcdev',loc:'Ottawa, ON',per:'2026 – Present',s:2026,e:Math.max(2026.25,NOW_Y),now:true,
