@@ -21,7 +21,7 @@ const CONTENT = {
   email: 'prlcjobs@proton.me',
 
   /* LinkedIn profile */
-  linkedin: 'https://www.linkedin.com/',
+  linkedin: 'https://www.linkedin.com/in/paulocoelho-pm',
 
   /* Experience timeline. s/e = start/end as decimal years; b = bullet points shown in the brief.
      Listed oldest → newest; the page shows newest first. now: true marks the current role. */
@@ -49,7 +49,7 @@ const CONTENT = {
  {co:'T-Systems',role:'Head of Global PLM',loc:'Blumenau, Brazil',per:'Sep 2017 – Jun 2018',s:2017.67,e:2018.5,
   sum:'Directed 13 service-delivery streams with an annual budget of about €10M.',
   b:['Standardized PLM delivery processes across Latin America.','Designed and implemented a self-managed team model with rotating responsibilities.',
-     'Improved customer satisfaction from 2.1 to 4.7 out of 5, ahead of the Indian and Chinese support centers.','Added 7% of income to the portfolio in Q1 2018.']},
+     'Improved customer satisfaction from 2.1 to 4.7 out of 5, ahead of the Indian and Chinese support centers.','Increased portfolio ROI by approximately 7% in Q1 2018.']},
  {co:'Cinco',role:'Activation Producer / IT Functional Manager',loc:'Montreal, QC',per:'Aug 2018 – Dec 2018',s:2018.58,e:2019,
   sum:'Restructured IT processes and tools.',
   b:['Introduced Jira and Agile across the IT organization.']},
@@ -71,12 +71,15 @@ const CONTENT = {
  {co:'Syntronic — at Gentex',role:'Senior Project Manager, Software and Systems',loc:'Kanata, ON',per:'Mar 2024 – Jun 2025',s:2024.17,e:2025.5,
   sum:'Coordinated about 13 technical resources across software, embedded, systems, architecture, testing, hardware and electrical engineering.',
   b:['Governed delivery under SDLC and V-Model frameworks.','Reported status, risks and dependencies to Toyota\'s program manager.']},
- {co:'Plantum',role:'Transformation Portfolio Manager',loc:'Brazil (Remote)',per:'Aug 2025 – Present',s:2025.58,e:Math.max(2025.75,NOW_Y),now:true,
-  sum:'Leads the company-wide generative AI implementation, including use-case selection, prioritization by business value, team structure and adoption.',
+ {co:'Plantum',role:'Transformation Portfolio Manager',loc:'Brazil (Remote)',per:'Aug 2025 – Aug 2026',s:2025.58,e:2026.58,
+  sum:'Joined Plantum in August 2025 as Transformation Portfolio Manager. Promoted to CTO & COO in August 2026.',
+  b:['Designed the PMO strategy and operating model, created the PMO team and refocused the portfolio on value-delivery projects.','Reorganized the AI and IT group into value-driven project and R&D teams.']},
+ {co:'Plantum',role:'Chief Technology Officer & Chief Operating Officer',loc:'Brazil (Remote)',per:'Aug 2026 – Present',s:2026.58,e:Math.max(2026.75,NOW_Y),now:true,
+  sum:'Promoted from Transformation Portfolio Manager in August 2026. Leads the company-wide generative AI implementation, including use-case selection, prioritization by business value, team structure and adoption.',
   b:['Manages the AI project portfolio and leads a confidential AI R&D program for monitoring large forestry areas.']},
  {co:'AI Agent Designer and Operator (Independent)',role:'GitHub: prlcdev',loc:'Ottawa, ON',per:'2026 – Present',s:2026,e:Math.max(2026.25,NOW_Y),now:true,
-  sum:'Designs, version-controls in GitHub and operates multi-step agentic AI workflows (Claude skills) that draft, verify and publish professional content.',
-  b:['Built AI governance into each agent: explicit human approval before publishing, no credential access, source verification of every quote, rate limits and a run log for auditability.',
+  sum:'Designed, version-controls in GitHub and operates a multi-step AI agent (Claude skill) that drafts, verifies and publishes professional content.',
+  b:['Built AI governance into the agent: explicit human approval before publishing, no credential access, source verification of every quote, a limit of one run per week and a run log for auditability.',
      'Used AI-assisted development to build and deploy this modular, multi-theme website on GitHub Pages.']}
 ],
 
