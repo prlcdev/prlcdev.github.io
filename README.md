@@ -6,8 +6,8 @@ Live at https://prlcdev.github.io. Static site with no build step, served by Git
 
 ## Publishing rules
 
-- Changes reach the live site only through a pull request that passes the `validate` workflow (`.github/workflows/validate.yml`): the Agent Log check (`tools/validate-agent-log.mjs`) and a gitleaks secret scan.
-- The career agent opens pull requests; Paulo merges them. The Claude Code hook in `.claude/` blocks the agent from pushing to `main` or merging.
+- Every push and pull request runs the `validate` workflow (`.github/workflows/validate.yml`): the Agent Log check (`tools/validate-agent-log.mjs`) and a gitleaks secret scan. A failure shows on the pull request; it blocks merging only if branch protection on `main` requires the check.
+- The career agent opens pull requests; Paulo merges them. In Claude Code sessions started in this repo, the hook in `.claude/` blocks the agent from pushing to `main` or merging.
 
 ## Folder map
 
