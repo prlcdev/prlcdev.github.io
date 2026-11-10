@@ -75,8 +75,8 @@ const CONTENT = {
   sum:'Leads the company-wide generative AI implementation, including use-case selection, prioritization by business value, team structure and adoption.',
   b:['Manages the AI project portfolio and leads a confidential AI R&D program for monitoring large forestry areas.']},
  {co:'AI Agent Designer and Operator (Independent)',role:'GitHub: prlcdev',loc:'Ottawa, ON',per:'2026 – Present',s:2026,e:Math.max(2026.25,NOW_Y),now:true,
-  sum:'Designs, version-controls in GitHub and operates multi-step agentic AI workflows (Claude skills) that draft, verify and publish professional content.',
-  b:['Built AI governance into each agent: explicit human approval before publishing, no credential access, source verification of every quote, rate limits and a run log for auditability.',
+  sum:'Designed, version-controls in GitHub and operates a multi-step AI agent (Claude skill) that drafts, verifies and publishes professional content.',
+  b:['Built AI governance into the agent: explicit human approval before publishing, no credential access, source verification of every quote, a limit of one run per week and a run log for auditability.',
      'Used AI-assisted development to build and deploy this modular, multi-theme website on GitHub Pages.']}
 ],
 
