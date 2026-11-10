@@ -27,8 +27,7 @@ document.getElementById('ticket').addEventListener('submit',e=>{
 
 ${v('f-msg')}
 
-— ${v('f-name')}${v('f-org')?'
-'+v('f-org'):''}
+— ${v('f-name')}${v('f-org')?'\n'+v('f-org'):''}
 Topic: ${v('f-type')}`;
   document.getElementById('out').textContent='> Preparing your email. Your mail app will open with the details filled in.';
   location.href=`mailto:${CONTENT.email}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`;
