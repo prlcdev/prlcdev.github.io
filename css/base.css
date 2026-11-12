@@ -53,7 +53,7 @@ nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 82%,
 .nav-in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:18px}
 .logo{font:900 1.15rem var(--disp);letter-spacing:.12em;color:var(--head);text-shadow:0 0 calc(12px*var(--g)) var(--a1)}
 .logo .co{color:var(--a2);text-shadow:0 0 calc(12px*var(--g)) var(--a2)}
-.links{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.links{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
 .links::-webkit-scrollbar{display:none}
 .links a{font:600 .72rem var(--mono);letter-spacing:.14em;color:var(--muted);white-space:nowrap;position:relative;padding:4px 0}
 .links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--a1);box-shadow:0 0 calc(8px*var(--g)) var(--a1);transition:width .3s}
@@ -263,3 +263,15 @@ footer{max-width:1180px;margin:80px auto 0;padding:24px 16px 40px;border-top:1px
 .term .out .send-opts{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 8px}
 .term .out .send-opts .btn{padding:10px 14px;font-size:.72rem;text-decoration:none}
 .term .out .send-note{color:var(--muted);font-size:.75rem;margin:0}
+
+/* ---------- rules table ---------- */
+.regs{padding:0;overflow-x:auto;margin:18px 0}
+.regs table{width:100%;border-collapse:collapse;min-width:900px;font:400 .84rem/1.45 var(--body);color:var(--ink)}
+.regs th{font:600 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--a2);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.regs td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.regs tr:last-child td{border-bottom:0}
+.regs .rc{font:600 .8rem var(--mono);color:var(--head);min-width:150px}
+.regs .rg{white-space:nowrap}
+.regs td a{white-space:nowrap}
+.regs .rq{color:var(--muted);font-style:italic;min-width:220px}
+@media (max-width:1320px){.links a{letter-spacing:.1em}}
