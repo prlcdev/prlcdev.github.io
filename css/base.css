@@ -275,3 +275,12 @@ footer{max-width:1180px;margin:80px auto 0;padding:24px 16px 40px;border-top:1px
 .regs td a{white-space:nowrap}
 .regs .rq{color:var(--muted);font-style:italic;min-width:220px}
 @media (max-width:1320px){.links a{letter-spacing:.1em}}
+@media (max-width:760px){
+  .regs{overflow:visible}
+  .regs table{min-width:0}
+  .regs thead{display:none}
+  .regs tr{display:block;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .regs tr:last-child{border-bottom:0}
+  .regs td{display:block;padding:3px 0;border:0}
+  .regs .rq{margin-top:6px}
+}

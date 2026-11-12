@@ -32,7 +32,6 @@
 
 /* hero scroll parallax (values set by script) */
 .hero .glitch{transform:translateY(calc(var(--hy,0) * .35px))}
-.hero .typed{transform:translateY(calc(var(--hy,0) * .18px))}
 .hero{opacity:var(--ho,1)}
 
 /* section headings */
